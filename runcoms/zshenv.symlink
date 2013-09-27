@@ -17,9 +17,9 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
-export PAGER='less'
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='vimpager'
 
 #
 # Language
@@ -42,7 +42,11 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
+  /usr/local/opt/coreutils/libexec/gnubin 
+  /usr/local/{bin,sbin} 
+  /usr/local/texlive/2013/bin/x86_64-darwin 
+  /Users/paul/Library/Python/2.7/bin 
+  /usr/local/opt/ruby/bin
   $path
 )
 
