@@ -28,12 +28,18 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
+  'history-substring-search' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
   'git' \
-  'prompt'
+  'tmux' \
+  'syntax-highlighting' \
+  'python' \
+  'homebrew' \
+  'osx' \
+  'prompt' \
 
 #
 # Editor
