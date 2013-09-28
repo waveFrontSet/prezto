@@ -28,17 +28,17 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
-  'history-substring-search' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
   'git' \
   'tmux' \
-  'syntax-highlighting' \
   'python' \
   'homebrew' \
   'osx' \
+  'syntax-highlighting' \
+  'history-substring-search' \
   'prompt' \
 
 #
