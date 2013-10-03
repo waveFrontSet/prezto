@@ -13,3 +13,9 @@ fi
 # Customize to your needs...
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Remapping Escape to jk in insert mode
+bindkey -M viins 'jk' vi-cmd-mode
+
+# Mapping history auto complete to <C-r>
+bindkey '^R' history-incremental-search-backward
