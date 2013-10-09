@@ -38,7 +38,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'history-substring-search' \
+  'fasd' \
   'git' \
   'tmux' \
   'python' \
