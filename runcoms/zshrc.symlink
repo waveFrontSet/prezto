@@ -14,8 +14,9 @@ fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# Remapping Escape to jk in insert mode
-bindkey -M viins 'jk' vi-cmd-mode
+# Latex-related macros
+alias compilestuff="cd ~/thesis; latexmk -pdf -pvc -silent -pdflatex='lualatex -synctex=1 --interaction=nonstopmode' thesis_notes.tex"
+alias openstuff="cd ~/thesis; gvim thesis_notes.tex thesis_diary.markdown thesis_literature.bib"
 
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
