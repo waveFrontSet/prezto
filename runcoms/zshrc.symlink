@@ -16,7 +16,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Latex-related macros
 alias compilestuff="cd ~/thesis; latexmk -pdf -pvc -silent -pdflatex='lualatex -synctex=1 --interaction=nonstopmode' thesis_notes.tex"
-alias openstuff="cd ~/thesis; gvim thesis_notes.tex thesis_diary.markdown thesis_literature.bib"
+alias openstuff="cd ~/thesis; vim thesis_notes.tex thesis_diary.markdown thesis_literature.bib"
 
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
