@@ -18,5 +18,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 alias compilestuff="cd ~/thesis; latexmk -pdf -pvc -silent -pdflatex='lualatex -synctex=1 --interaction=nonstopmode' thesis_notes.tex"
 alias openstuff="cd ~/thesis; vim thesis_notes.tex thesis_diary.markdown thesis_literature.bib"
 
+# Start emacs faster under Mac OS
+alias em="open /Applications/Emacs.app"
+
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
