@@ -21,6 +21,10 @@ eval $(gpg-agent --daemon --allow-preset-passphrase)
 alias compilestuff="cd ~/thesis; latexmk -pdf -pvc -silent -pdflatex='lualatex -synctex=1 --interaction=nonstopmode' thesis_notes.tex"
 alias openstuff="cd ~/thesis; vim thesis_notes.tex thesis_diary.markdown thesis_literature.bib"
 
+# Pass-related aliases
+alias pa=pass
+alias pc="pass -c"
+
 # Start emacs faster under Mac OS
 alias em="open /Applications/Emacs.app"
 
