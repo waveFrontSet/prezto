@@ -14,6 +14,9 @@ fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# Starting gpg-agent
+eval $(gpg-agent --daemon --allow-preset-passphrase)
+
 # Latex-related macros
 alias compilestuff="cd ~/thesis; latexmk -pdf -pvc -silent -pdflatex='lualatex -synctex=1 --interaction=nonstopmode' thesis_notes.tex"
 alias openstuff="cd ~/thesis; vim thesis_notes.tex thesis_diary.markdown thesis_literature.bib"
