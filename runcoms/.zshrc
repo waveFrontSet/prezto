@@ -15,7 +15,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Starting gpg-agent
-if [[ -n $GPG_AGENT_INFO ]]; then
+if [[ -z $GPG_AGENT_INFO ]]; then
     eval $(gpg-agent --daemon --allow-preset-passphrase)
 fi
 
