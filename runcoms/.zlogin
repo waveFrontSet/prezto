@@ -20,3 +20,7 @@ if (( $+commands[fortune] )); then
   print
 fi
 
+# Let keychain manage the *-agents.
+keychain
+source ~/.keychain/*-sh
+source ~/.keychain/*-sh-gpg
