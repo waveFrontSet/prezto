@@ -14,11 +14,6 @@ fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# Starting gpg-agent
-if [[ -z $GPG_AGENT_INFO ]]; then
-    eval $(gpg-agent --daemon --allow-preset-passphrase --default-cache-ttl=18000)
-fi
-
 # Pass-related aliases
 alias pa=pass
 alias pc="pass -c"
