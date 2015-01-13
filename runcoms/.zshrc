@@ -18,6 +18,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 alias pa=pass
 alias pc="pass -c"
 
+# Pull everything I need from my reps
+alias gp="cd ~/dotfiles; git p; pc rep/bit; cd ~/org; git p; cd ~/latex-docs; git p; cd ~"
+
 # Start emacs faster under Mac OS
 alias em="open /Applications/Emacs.app"
 
