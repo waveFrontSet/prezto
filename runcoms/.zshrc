@@ -14,6 +14,9 @@ fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# Virtualenvwrapper stuff for mac
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+
 # Pass-related aliases
 alias pa=pass
 alias pc="pass -c"
