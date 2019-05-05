@@ -46,6 +46,7 @@ path=(
   /usr/local/{bin,sbin} 
   /usr/local/texlive/2014/bin/x86_64-darwin 
   /Users/paul/Library/Python/2.7/bin 
+  /Users/paul/anaconda2/bin
   /usr/local/opt/ruby/bin
   $path
 )
