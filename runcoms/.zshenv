@@ -44,9 +44,8 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/opt/coreutils/libexec/gnubin 
   /usr/local/{bin,sbin} 
-  /usr/local/texlive/2014/bin/x86_64-darwin 
   /Users/paul/Library/Python/2.7/bin 
-  /Users/paul/anaconda2/bin
+  /Users/paul/anaconda/bin
   /usr/local/opt/ruby/bin
   $path
 )
