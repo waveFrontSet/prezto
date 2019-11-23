@@ -42,9 +42,9 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ~/.emacs.d/bin
   /usr/local/opt/coreutils/libexec/gnubin 
   /usr/local/{bin,sbin} 
-  /Users/paul/Library/Python/2.7/bin 
   /Users/paul/anaconda/bin
   /usr/local/opt/ruby/bin
   $path
