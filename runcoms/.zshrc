@@ -41,3 +41,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(direnv hook zsh)"
+show_virtual_env() {
+  if [[ -n "$CONDA_DEFAULT_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $CONDA_DEFAULT_ENV))"
+  fi
+}
+PS1='$(show_virtual_env)'$PS1
