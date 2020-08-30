@@ -26,6 +26,8 @@ alias em="open /Applications/Emacs.app"
 
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
+# Remap acceptance of autosuggestion
+bindkey '^ ' autosuggest-accept
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/paul/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
