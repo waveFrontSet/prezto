@@ -41,12 +41,15 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'fasd' \
   'git' \
+  'ssh' \
   'tmux' \
   'python' \
   'homebrew' \
   'osx' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'autosuggestions' \
+  'docker' \
   'prompt' \
 
 #
