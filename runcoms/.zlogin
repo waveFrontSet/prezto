@@ -20,7 +20,11 @@
 # Execute code only if STDERR is bound to a TTY.
 if [[ -o INTERACTIVE && -t 2 ]]; then
 
-# Let keychain manage the *-agents.
-keychain
-source ~/.keychain/*-sh
-source ~/.keychain/*-sh-gpg
+  # Print a random, hopefully interesting, adage.
+  if (( $+commands[fortune] )); then
+    fortune -s
+    print
+  fi
+
+fi >&2
+
