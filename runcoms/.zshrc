@@ -31,13 +31,29 @@ alias gp="cd ~/dotfiles; git p; pc rep/bit; cd ~/org; git p; cd ~/latex-docs; gi
 # Start emacs faster under Mac OS
 alias em="open /Applications/Emacs.app"
 
+# Fuzzy-find and open file in vim
+alias v="fasd -f -e vim"
+
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
 # Remap acceptance of autosuggestion
 bindkey '^ ' autosuggest-accept
+
+eval "$(direnv hook zsh)"
+show_virtual_env() {
+  if [[ -n "$CONDA_DEFAULT_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $CONDA_DEFAULT_ENV))"
+  fi
+}
+PS1='$(show_virtual_env)'$PS1
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/paul/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/paul/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -50,13 +66,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-eval "$(direnv hook zsh)"
-show_virtual_env() {
-  if [[ -n "$CONDA_DEFAULT_ENV" && -n "$DIRENV_DIR" ]]; then
-    echo "($(basename $CONDA_DEFAULT_ENV))"
-  fi
-}
-PS1='$(show_virtual_env)'$PS1
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
