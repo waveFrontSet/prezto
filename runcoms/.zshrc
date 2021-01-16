@@ -51,18 +51,10 @@ PS1='$(show_virtual_env)'$PS1
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/paul/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/paul/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/Users/paul/anaconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/paul/anaconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+# Created by `userpath` on 2021-01-01 12:17:58
+export PATH="$PATH:/Users/paul/.local/bin"
 
