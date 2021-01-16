@@ -8,7 +8,5 @@
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# Setting PATH for Python 3.9
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
-export PATH
+# Created by `userpath` on 2021-01-01 12:17:58
+export PATH="$PATH:/Users/paul/.local/bin"
