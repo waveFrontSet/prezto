@@ -32,7 +32,10 @@ alias gp="cd ~/dotfiles; git p; pc rep/bit; cd ~/org; git p; cd ~/latex-docs; gi
 alias em="open /Applications/Emacs.app"
 
 # Fuzzy-find and open file in vim
-alias v="fasd -f -e vim"
+alias v="fasd -f -t -e vim -b viminfo"
+
+# Jump to folder
+alias j="fasd_cd"
 
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
