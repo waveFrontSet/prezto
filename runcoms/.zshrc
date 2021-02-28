@@ -18,8 +18,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
+# Check for M1 Arch
+BREW_PREFIX="usr/local"
+if [[ $(uname -m) == "arm64" ]]; then
+    BREW_PREFIX="/opt/homebrew"
+fi
+
+source ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=(${BREW_PREFIX}/share/zsh-completions $fpath)
 
 # Pass-related aliases
 alias pa=pass
@@ -60,4 +66,3 @@ fpath+=~/.zfunc
 
 # Created by `userpath` on 2021-01-01 12:17:58
 export PATH="$PATH:/Users/paul/.local/bin"
-
