@@ -43,6 +43,10 @@ alias v="fasd -f -t -e vim -b viminfo"
 # Jump to folder
 alias j="fasd_cd"
 
+# On M1 provide fallback alternative ibrew
+alias brew=${BREW_PREFIX}/bin/brew
+alias ibrew=/usr/local/bin/brew
+
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
 # Remap acceptance of autosuggestion
