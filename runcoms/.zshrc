@@ -19,7 +19,7 @@ fi
 
 # Customize to your needs...
 # Check for M1 Arch
-BREW_PREFIX="usr/local"
+BREW_PREFIX="/usr/local"
 if [[ $(uname -m) == "arm64" ]]; then
     BREW_PREFIX="/opt/homebrew"
 fi
