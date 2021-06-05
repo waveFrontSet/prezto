@@ -45,7 +45,7 @@ alias j="fasd_cd"
 
 # On M1 provide fallback alternative ibrew
 alias brew=${BREW_PREFIX}/bin/brew
-alias ibrew=/usr/local/bin/brew
+alias ibrew=arch -x86_64 /usr/local/bin/brew
 
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
@@ -70,3 +70,11 @@ fpath+=~/.zfunc
 
 # Created by `userpath` on 2021-01-01 12:17:58
 export PATH="$PATH:/Users/paul/.local/bin"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$PATH:/Library/TeX/texbin/"
+[ -f "/Users/paul/.ghcup/env" ] && source "/Users/paul/.ghcup/env" # ghcup-env
