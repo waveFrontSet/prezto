@@ -53,6 +53,7 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'docker' \
   'prompt' \
+  'fzf' \
 
 #
 # Autosuggestions
@@ -240,3 +241,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+#
+# fzf
+zstyle ':prezto:module:fzf' color-scheme 'Solarized Dark'
