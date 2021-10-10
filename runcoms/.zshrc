@@ -43,6 +43,10 @@ alias v="fasd -f -t -e vim -b viminfo"
 # Jump to folder
 alias j="fasd_cd"
 
+# Kitty shortcuts
+alias icat="kitty +kitten icat"
+alias ssh="kitty +kitten ssh"
+
 # On M1 provide fallback alternative ibrew
 alias brew=${BREW_PREFIX}/bin/brew
 alias ibrew=arch -x86_64 /usr/local/bin/brew
