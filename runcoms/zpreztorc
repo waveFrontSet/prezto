@@ -52,7 +52,6 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'autosuggestions' \
   'docker' \
-  'prompt' \
   'fzf' \
   'prompt'
 
@@ -245,3 +244,4 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #
 # fzf
 zstyle ':prezto:module:fzf' color-scheme 'Solarized Dark'
+zstyle ':prezto:module:fzf' preview 'yes'
