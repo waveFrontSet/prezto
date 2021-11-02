@@ -46,6 +46,9 @@ alias ssh="kitty +kitten ssh"
 alias brew=${BREW_PREFIX}/bin/brew
 alias ibrew=arch -x86_64 /usr/local/bin/brew
 
+# fzf config
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat --style numbers,changes --color=always {} || tree -C {}) 2> /dev/null | head -200'"
+
 # Mapping history auto complete to <C-r>
 bindkey '^R' history-incremental-search-backward
 # Remap acceptance of autosuggestion

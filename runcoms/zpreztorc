@@ -243,5 +243,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # zstyle ':prezto:module:utility' safe-ops 'yes'
 #
 # fzf
+zstyle ':prezto:module:fzf' fzf-base "${BREW_PREFIX}/Cellar/fzf/latest/shell"
 zstyle ':prezto:module:fzf' color-scheme 'Solarized Dark'
 zstyle ':prezto:module:fzf' preview 'yes'
