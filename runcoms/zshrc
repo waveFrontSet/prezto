@@ -18,11 +18,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-# Check for M1 Arch
-BREW_PREFIX="/usr/local"
-if [[ $(uname -m) == "arm64" ]]; then
-    BREW_PREFIX="/opt/homebrew"
-fi
 
 source ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(${BREW_PREFIX}/share/zsh-completions $fpath)
@@ -71,14 +66,4 @@ PS1='$(show_virtual_env)'$PS1
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
-
-# Created by `userpath` on 2021-01-01 12:17:58
-export PATH="$PATH:/Users/paul/.local/bin"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$PATH:/Library/TeX/texbin/"
 [ -f "/Users/paul/.ghcup/env" ] && source "/Users/paul/.ghcup/env" # ghcup-env
