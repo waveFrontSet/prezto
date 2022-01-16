@@ -71,6 +71,15 @@ PS1='$(show_virtual_env)'$PS1
   direnv allow
 }
 
+# Initialize pyproject.toml with dev dependencies
+,poetry-init() {
+  poetry init -n \
+      --dev-dependency pytest \
+      --dev-dependency pytest-cov \
+      --dev-dependency pylint \
+      --dev-dependency black
+}
+
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
