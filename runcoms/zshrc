@@ -42,6 +42,9 @@ alias j="fasd_cd"
 alias icat="kitty +kitten icat"
 alias ssh="kitty +kitten ssh"
 
+# Use ripgrep instead of grep
+alias grep=rg
+
 # On M1 provide fallback alternative ibrew
 alias brew=${BREW_PREFIX}/bin/brew
 alias ibrew=arch -x86_64 /usr/local/bin/brew
