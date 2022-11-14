@@ -79,8 +79,10 @@ PS1='$(show_virtual_env)'$PS1
   poetry init -n \
       --dev-dependency pytest \
       --dev-dependency pytest-cov \
-      --dev-dependency pylint \
-      --dev-dependency black
+      --dev-dependency flake8 \
+      --dev-dependency black \
+      --dev-dependency isort \
+      "$@"
 }
 
 
@@ -88,3 +90,9 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 [ -f "/Users/paul/.ghcup/env" ] && source "/Users/paul/.ghcup/env" # ghcup-env
+
+
+# OCTAVIA CLI 0.40.17
+OCTAVIA_ENV_FILE=/Users/paulgrillenberger/.octavia
+export OCTAVIA_ENABLE_TELEMETRY=False
+alias octavia="docker run -i --rm -v \$(pwd):/home/octavia-project --network host --env-file \${OCTAVIA_ENV_FILE} --user \$(id -u):\$(id -g) airbyte/octavia-cli:0.40.17"
