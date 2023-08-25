@@ -93,9 +93,14 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 [ -f "/Users/paul/.ghcup/env" ] && source "/Users/paul/.ghcup/env" # ghcup-env
+for func in ~/.zfunc/*(.N); do
+  autoload -Uz "${func:t}"
+done
 
 
 # OCTAVIA CLI 0.40.17
 OCTAVIA_ENV_FILE=/Users/paulgrillenberger/.octavia
 export OCTAVIA_ENABLE_TELEMETRY=False
 alias octavia="docker run -i --rm -v \$(pwd):/home/octavia-project --network host --env-file \${OCTAVIA_ENV_FILE} --user \$(id -u):\$(id -g) airbyte/octavia-cli:0.40.17"
+
+. "$HOME/.cargo/env"
