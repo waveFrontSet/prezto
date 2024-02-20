@@ -82,9 +82,8 @@ PS1='$(show_virtual_env)'$PS1
   poetry init -n \
       --dev-dependency pytest \
       --dev-dependency pytest-cov \
-      --dev-dependency flake8 \
-      --dev-dependency black \
-      --dev-dependency isort \
+      --dev-dependency ruff \
+      --dev-dependency ruff-lsp \
       "$@"
 }
 
@@ -104,4 +103,8 @@ alias octavia="docker run -i --rm -v \$(pwd):/home/octavia-project --network hos
 
 . "$HOME/.cargo/env"
 
-[ -f "/Users/paul/.ghcup/env" ] && source "/Users/paul/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
