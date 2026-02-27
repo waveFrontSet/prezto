@@ -21,8 +21,8 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 #
@@ -53,8 +53,8 @@ path=(
   /opt/homebrew/bin
   /opt/homebrew/sbin
   ~/.emacs.d/bin
-  /usr/local/opt/coreutils/libexec/gnubin 
-  /usr/local/{bin,sbin} 
+  /usr/local/opt/coreutils/libexec/gnubin
+  /usr/local/{bin,sbin}
   /Users/paul/anaconda/bin
   /usr/local/opt/ruby/bin
   ~/.local/bin

@@ -18,9 +18,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-# Init fasd
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install \
-      zsh-wcomp zsh-wcomp-install)"
+# Init zoxide (smart cd replacement)
+eval "$(zoxide init zsh)"
 
 source ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(${BREW_PREFIX}/share/zsh-completions $fpath)
@@ -35,11 +34,13 @@ alias gp="cd ~/dotfiles; git p; pc rep/bit; cd ~/org; git p; cd ~/latex-docs; gi
 # Start emacs faster under Mac OS
 alias em="open /Applications/Emacs.app"
 
-# Fuzzy-find and open file in vim
-alias v="fasd -f -t -e vim -b viminfo"
+# Jump to folder (zoxide: z replaces j, zi for interactive)
+alias j="z"
 
-# Jump to folder
-alias j="fasd_cd -d"
+# Modern ls replacement (eza)
+alias ls="eza --icons"
+alias ll="eza -la --icons --git"
+alias tree="eza --tree --icons"
 
 # Kitty shortcuts
 alias icat="kitty +kitten icat"
@@ -55,8 +56,9 @@ alias ibrew=arch -x86_64 /usr/local/bin/brew
 # fzf config
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat --style numbers,changes --color=always {} || tree -C {}) 2> /dev/null | head -200'"
 
-# Mapping history auto complete to <C-r>
-bindkey '^R' history-incremental-search-backward
+# Init atuin (enhanced shell history with fuzzy search)
+eval "$(atuin init zsh)"
+
 # Remap acceptance of autosuggestion
 bindkey '^ ' autosuggest-accept
 
