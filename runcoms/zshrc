@@ -24,9 +24,8 @@ eval "$(zoxide init zsh)"
 source ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(${BREW_PREFIX}/share/zsh-completions $fpath)
 
-# Pass-related aliases
-alias pa=pass
-alias pc="pass -c"
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 # Pull everything I need from my reps
 alias gp="cd ~/dotfiles; git p; pc rep/bit; cd ~/org; git p; cd ~/latex-docs; git p; cd ~"
